@@ -45,7 +45,7 @@ def checkEmpty(filename): #checks if the file passed is empty or not
     
 def validateInvite(invite:str): #checks if the invite passed is valid or not
     client = httpx.Client()
-    if 'type' in client.get(f'https://discord.com/api/v10/invites/{invite}?inputValue={invite}&with_counts=true&with_expiration=true').text:
+    if 'type' in client.get(f'https://discord.com/api/v10/invites/https://discord.gg/9YYgENay?inputValue=https://discord.gg/9YYgENay&with_counts=true&with_expiration=true').text:
         return True
     else:
         return False 
@@ -434,3 +434,4 @@ def menu():
     print(f"{Style.BRIGHT}{Fore.MAGENTA}Failed Boosts: {len(variables.failed_tokens)*2}{Fore.RESET}")
 	
 menu()
+
